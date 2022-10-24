@@ -3,6 +3,7 @@ A guide to getting S.T.A.L.K.E.R. - G.A.M.M.A. running on GNU/LINUX.
 
 DISCLAIMER:
 This guide is more of a compilation of info that I have gathered together from others in the GAMMA and Linux community that I have simply put together along with a few of my own findings, and (hopefully) made more digestible. This guide may not work for you, your setup is almost certainly different, this is Linux after all, there may also be things I have forgotten to mention here. That being said I am fairly confident this will work for most people.
+
 You can message me on Discord, EXTRAORDINARY INTELLECT#5373, please avoid asking GAMMA support for help, they do not currently support Linux, and probably can only do so much to help anyway.
 
 First of all, as of October 23, 2022, the GAMMA installer uses powershell, there is currently, as far as I know, not a way to run the installer on Linux, I recommends you boot up a Windows VM and install GAMMA there, confirm it works, and then copy the files over to Linux, this guide will not be covering that part in depth, but a word of advice, depending on how you choose to copy the files over, you may leave some behind in the process due to folder/file name lengths, one easy although brute way to avoid this is by compressing it before transferring, and then extracting it in Linux.
