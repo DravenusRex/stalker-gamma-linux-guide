@@ -14,7 +14,7 @@ You have two options, running the game through Lutris with Wine, or you can try 
 
 I will be assuming that you have used Lutris/Wine before and know atleast the basics of configuration.
 You'll want to add ModOrganizer.exe to Lutris, and then configure as follows:
-The version of Wine I got GAMMA working on is the latest development build (7.19 as of writing). For me, the built in Wine versions that come with Lutris did not work. They may or may not for you, if not, experiment, try the latest wine-devel first.
+The version of Wine I got GAMMA working on is the latest development build (7.19 as of writing). For me, the built in Wine versions that come with Lutris did not work. They may or may not for you, if not, experiment; try the latest wine-devel first.
 Make sure DXVK and VKD3D are enabled, Esync caused issues for me so I disabled it.
 For the Winetricks prefix, I enabled the following DLLs:
 - cmd
