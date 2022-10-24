@@ -51,7 +51,7 @@ Close the game and MO2, navigate to the Anomaly folder, open the bin folder, and
 - ReShade.ini
 - ReShade.log
 
-By now, you will in theory have a fully playable (though likely imperfect) S.T.A.L.K.E.R. - G.A.M.M.A. experience on Linux.
+By now, you will should have a fully playable (though likely imperfect) S.T.A.L.K.E.R. - G.A.M.M.A. experience on Linux.
 
 
 Thanks:<br />no.#3094 (LafreSita) - Groundwork for the wineprefix.<br />yeyande#9033 (yeyande) - Unintentionally helping me find the cause of the key repeat stutter.
