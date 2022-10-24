@@ -2,7 +2,7 @@
 A guide to getting S.T.A.L.K.E.R. - G.A.M.M.A. running on GNU/LINUX.
 
 DISCLAIMER:
-This guide is more of a compilation of info that I have gathered together from others in the GAMMA and Linux community that I have simply put together along with a few of my own findings, and (hopefully) made more digestible. This guide may not work for you, your setup is almost certainly different, this is Linux after all, there may also be things I have forgotten to mention here. That being said I am fairly confident this will work for most people.
+This guide is more of a compilation of info that I have gathered together from others in the GAMMA and Linux community that I have simply put together along with a few of my own findings, and (hopefully) made more digestible. This guide may not work for you, your setup is almost certainly different, this is Linux after all, there may also be things I have forgotten to mention here, and there are probably typos. That being said I am fairly confident this will work for most people.
 
 You can message me on Discord, EXTRAORDINARY INTELLECT#5373, please avoid asking GAMMA support for help, they do not currently support Linux, and probably can only do so much to help anyway.
 
