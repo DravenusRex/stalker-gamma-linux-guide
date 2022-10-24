@@ -49,7 +49,6 @@ Close the game and MO2, navigate to the Anomaly folder, open the bin folder, and
 - dxgi.dll
 - G.A.M.M.A.Reshade.ini
 - ReShade.ini
-- ReShade.log
 
 By now, you should have a fully playable (though likely imperfect) S.T.A.L.K.E.R. - G.A.M.M.A. experience on Linux.
 
