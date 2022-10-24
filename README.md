@@ -26,8 +26,10 @@ For the Winetricks prefix, I enabled the following DLLs:
 - vcrun2019
 
 With that, you should now atleast be able to launch MO2, and configure further from there;
-If MO2 looks weird, try changing Wine version.
+
 If you installed GAMMA in Windows, and then copied over the files, your file paths will certainly be messed up, this is why MO2 is asking you where your game is, when you click browse it will open up the Wine file system, you will notice it is similar to your Linux file system, simply with "Z:\" appended to the front, find your Anomaly folder and point Mod Organizer to it.
+
+You should be looking at the main MO2 window now, if it looks like UI elements are missing (black boxes etc.), try changing Wine versions.
 Ctrl+S opens a settings window in MO2, if that doesn't work, top left>Tools>Settings.
 Go to the Theme tab and choose 1809 Dark Mode.
 Go to the General tab on untick "Check for updates", this hasn't caused any issues yet, but just in case.
