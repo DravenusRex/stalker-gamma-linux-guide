@@ -32,6 +32,7 @@ Ctrl+S opens a settings window in MO2, if that doesn't work, top left>Tools>Sett
 Go to the Theme tab and choose 1809 Dark Mode.
 Go to the General tab on untick "Check for updates", this hasn't caused any issues yet, but just in case.
 You can close the settings window now, next you need to tell MO2 where the game executables are.
+
 In the large drop down menu next to the Play button, click <Edit...>
 Select Anomaly Launcher in the list, for the Binary path, you want to point it to AnomalyLauncher.exe, it will be in the root folder of the game (Anomaly), it will probably take you to the right place by default.
 For the Start in path, point it simply at the folder which AnomalyLauncher.exe is in, you can copy the path from above and remove the AnomalyLauncher.exe from it.
