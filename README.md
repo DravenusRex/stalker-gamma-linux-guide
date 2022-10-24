@@ -6,7 +6,7 @@ This guide is more of a compilation of info that I have gathered together from o
 
 You can message me on Discord, EXTRAORDINARY INTELLECT#5373, please avoid asking GAMMA support for help, they do not currently support Linux, and probably can only do so much to help anyway.
 
-First of all, as of October 23, 2022, the GAMMA installer uses powershell, currently, as far as I know, there is not a way to run the installer on Linux.<br />I recommend you boot up a Windows VM and install GAMMA there, confirm it works, and then copy the files over to Linux. This guide will not be covering that part in depth, but a word of advice; depending on how you choose to copy the files over, you may leave some behind in the process due to folder/file name lengths, one easy although brute way to avoid this is by compressing it before transferring, and then extracting it in Linux.
+As of October 23, 2022, the GAMMA installer uses powershell, currently, as far as I know, there is not a way to run the installer on Linux.<br />I recommend you boot up a Windows VM and install GAMMA there, confirm it works, and then copy the files over to Linux. This guide will not be covering that part in depth, but a word of advice; depending on how you choose to copy the files over, you may leave some behind in the process due to folder/file name lengths, one easy although brute way to avoid this is by compressing it before transferring, and then extracting it in Linux.
 
 Okay, you have the GAMMA files on your distro ready to go, now what?
 
