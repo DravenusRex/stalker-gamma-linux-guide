@@ -10,7 +10,7 @@ First of all, as of October 23, 2022, the GAMMA installer uses powershell, there
 
 Okay, you have the GAMMA files on your distro ready to go, now what?
 
-You have two options running the game through Lutris with Wine, or you can try adding MO2 (Mod Organizer 2) to Steam, and running it through Proton, this has worked for atleast one person on SteamDeck. I will be covering the Lutris+Wine route, because that is what has worked for me and a few others.
+You have two options, running the game through Lutris with Wine, or you can try adding MO2 (Mod Organizer 2) to Steam, and running it through Proton, this has worked for atleast one person on SteamDeck. I will be covering the Lutris+Wine route, because that is what has worked for me and a few others.
 
 I will be assuming that you have used Lutris/Wine before and know atleast the basics of configuration.
 You'll want to add ModOrganizer.exe to Lutris, and then configure as follows:
@@ -39,7 +39,7 @@ You can close the settings window now, next you need to tell MO2 where the game 
 
 In the large drop down menu next to the Play button, click <Edit...>
 Select Anomaly Launcher in the list, for the Binary path, you want to point it to AnomalyLauncher.exe, it will be in the root folder of the game (Anomaly), it will probably take you to the right place by default.
-For the Start in path, point it simply at the folder which AnomalyLauncher.exe is in, you can copy the path from above and remove the AnomalyLauncher.exe from it.
+For the Start in path, point it at the folder which AnomalyLauncher.exe is in, you can copy the path you set from above and remove "AnomalyLauncher.exe" from it.
 If you want to configure the other executables, you can do so, they are contained within the bin folder at the root of the game, however it isn't necessary.
 
 At this point, you should be able to run AnomalyLauncher through MO2, launch the game, and the game should at least run, but you may have severe stuttering if you press keys rapidly and move your mouse simultaneously, if this is the case, you must remove reshade;
