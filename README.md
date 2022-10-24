@@ -39,12 +39,12 @@ If you want to configure the other executables, you can do so, they are containe
 
 At this point, you should be able to run AnomalyLauncher through MO2, launch the game, and the game should at least run, but you may have severe stuttering if you press keys rapidly and move your mouse simultaneously, if this is the case, you must remove reshade;
 Close the game and MO2, navigate to the Anomaly folder, open the bin folder, and inside delete (or better yet move to another location):
-reshade-shaders
-d3d9.dll
-dxgi.dll
-G.A.M.M.A.Reshade.ini
-ReShade.ini
-ReShade.log
+- reshade-shaders
+- d3d9.dll
+- dxgi.dll
+- G.A.M.M.A.Reshade.ini
+- ReShade.ini
+- ReShade.log
 
 By now, you will in theory have a fully playable (though likely imperfect) S.T.A.L.K.E.R. - G.A.M.M.A. experience on Linux.
 
