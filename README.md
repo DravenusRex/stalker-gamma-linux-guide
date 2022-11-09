@@ -50,7 +50,14 @@ Close the game and MO2, navigate to the Anomaly folder, open the bin folder, and
 - G.A.M.M.A.Reshade.ini
 - ReShade.ini
 
-If you disable Reshade it is recommended that you also disable all mods that use it. (All mods under th shaders category in MO2).  Running Anomaly with these mods enabled without Reshade can cause lighting issues and other strange graphical glitches.
+If you disable Reshade it is recommended that you also disable all mods that use it. (See instructions below --- stolen from maxastyler/S.T.A.L.K.E.R.-Gamma-Steam-Deck guide).
+Disable the following mods in MO2:
+* Screen Space Shaders - Ascii1457
+* Shaders Cumulative Pack for GAMMA
+* Right click Beef’s NVG addon, click “reinstall mod” and tick the following options:
+  * Beef’s NVG
+  * Beef’s NVG - Patch ES
+* Delete anomaly/appdata/shaders_cache folder
 
 By now, you should have a fully playable (though likely imperfect) S.T.A.L.K.E.R. - G.A.M.M.A. experience on Linux.
 
