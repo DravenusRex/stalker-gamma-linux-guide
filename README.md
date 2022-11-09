@@ -50,6 +50,8 @@ Close the game and MO2, navigate to the Anomaly folder, open the bin folder, and
 - G.A.M.M.A.Reshade.ini
 - ReShade.ini
 
+If you disable Reshade it is recommended that you also disable all mods that use it. (All mods under th shaders category in MO2).  Running Anomaly with these mods enabled without Reshade can cause lighting issues and other strange graphical glitches.
+
 By now, you should have a fully playable (though likely imperfect) S.T.A.L.K.E.R. - G.A.M.M.A. experience on Linux.
 
 
