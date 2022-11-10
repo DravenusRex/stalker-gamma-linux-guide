@@ -1,20 +1,26 @@
 # stalker-gamma-linux-guide
-A guide to getting S.T.A.L.K.E.R. - G.A.M.M.A. running on GNU/LINUX.
+<h3>A guide to getting S.T.A.L.K.E.R. - G.A.M.M.A. running on GNU/LINUX.</h3>  
+
+If you are looking for a Steam Deck guide, check [this](https://github.com/maxastyler/S.T.A.L.K.E.R.-Gamma-Steam-Deck-Install-Guide/) out.  
 
 DISCLAIMER:
 This guide is more of a compilation of info that I have gathered together from others in the GAMMA and Linux community that I have simply put together along with a few of my own findings, and (hopefully) made more digestible. This guide may not work for you, your setup is almost certainly different, this is Linux after all, there may also be things I have forgotten to mention here, and there are probably typos. That being said I am fairly confident this will work for most people.
 
 You can message me on Discord, EXTRAORDINARY INTELLECT#5373, please avoid asking GAMMA support for help, they do not currently support Linux, and probably can only do so much to help anyway.
 
-As of October 23, 2022, the GAMMA installer uses powershell, currently, as far as I know, there is not a way to run the installer on Linux.<br />I recommend you boot up a Windows VM and install GAMMA there, confirm it works, and then copy the files over to Linux.<br />This guide will not be covering that part in depth, but a word of advice; depending on how you choose to copy the files over, you may leave some behind in the process due to folder/file name lengths.<br />One easy although brute way to avoid this is by compressing it before transferring, and then extracting it in Linux.
+As of November 9, 2022, the GAMMA installer uses powershell, as far as I know, there is not a way to run the installer on Linux.  
+I recommend you boot up a Windows VM and install GAMMA there, confirm it works, and then copy the files over.  
+This guide will not be covering that part in depth, but a word of advice; depending on how you choose to copy the files over, you may leave some behind in the process due to folder/file name lengths.  
+One easy although brute way to avoid this is by compressing it before transferring, and then extracting it in Linux.
 
 Okay, you have the GAMMA files on your distro ready to go, now what?
 
-You have two options, running the game through Lutris with Wine, or you can try adding MO2 (Mod Organizer 2) to Steam, and running it through Proton, this has worked for atleast one person on SteamDeck. I will be covering the Lutris+Wine route, because that is what has worked for me and a few others.
+You have two options, running the game through Lutris with Wine, or you can try adding MO2 (Mod Organizer 2) to Steam, and running it through Proton.  
+I will be covering the Lutris/Wine route, because that is what has worked for me and a few others.
 
 I will be assuming that you have used Lutris/Wine before and know atleast the basics of configuration.
 You'll want to add ModOrganizer.exe to Lutris, and then configure as follows:
-The version of Wine I got GAMMA working on is the latest development build (7.19 as of writing). For me, the built in Wine versions that come with Lutris did not work. They may or may not for you, if not, experiment; try the latest wine-devel first.
+The version of Wine I got GAMMA working on was the latest development build. For me, the built in Wine versions that come with Lutris did not work. They may or may not for you, if not, experiment; try the latest wine-devel first.
 Make sure DXVK and VKD3D are enabled, Esync caused issues for me so I disabled it.
 For the Winetricks prefix, I enabled the following DLLs:
 - cmd
@@ -37,7 +43,7 @@ Go to the Theme tab and choose 1809 Dark Mode.
 Go to the General tab on untick "Check for updates", this hasn't caused any issues yet, but just in case.
 You can close the settings window now, next you need to tell MO2 where the game executables are.
 
-In the large drop down menu next to the Play button, click <Edit...>
+In the large drop down menu next to the Play button, click "<Edit...>"
 Select Anomaly Launcher in the list, for the Binary path, you want to point it to AnomalyLauncher.exe, it will be in the root folder of the game (Anomaly), it will probably take you to the right place by default.
 For the Start in path, point it at the folder which AnomalyLauncher.exe is in, you can copy the path you set from above and remove "AnomalyLauncher.exe" from it.
 If you want to configure the other executables, you can do so, they are contained within the bin folder at the root of the game, however it isn't necessary.
@@ -50,8 +56,7 @@ Close the game and MO2, navigate to the Anomaly folder, open the bin folder, and
 - G.A.M.M.A.Reshade.ini
 - ReShade.ini
 
-If you disable Reshade it is recommended that you also disable all mods that use it. (See instructions below --- stolen from maxastyler/S.T.A.L.K.E.R.-Gamma-Steam-Deck guide).
-Disable the following mods in MO2:
+If you disable Reshade it is recommended that you also disable all mods that use it:
 * Screen Space Shaders - Ascii1457
 * Shaders Cumulative Pack for GAMMA
 * Right click Beef’s NVG addon, click “reinstall mod” and tick the following options:
@@ -62,8 +67,10 @@ Disable the following mods in MO2:
 By now, you should have a fully playable (though likely imperfect) S.T.A.L.K.E.R. - G.A.M.M.A. experience on Linux.
 
 
-Thanks:<br />no.#3094 (LafreSita) - Groundwork for the wineprefix.<br />yeyande#9033 (yeyande) - Unintentionally helping me find the cause of the key repeat stutter.
-
+Thanks:  
+no.#3094 (LafreSita) - Groundwork for the wineprefix.  
+yeyande#9033 (yeyande) - Unintentionally helping me find the cause of the key repeat stutter.  
+maxastyler and his [Steam Deck Guide](https://github.com/maxastyler/S.T.A.L.K.E.R.-Gamma-Steam-Deck-Install-Guide/)
 
 
 
