@@ -13,7 +13,7 @@ If you have any info to add to the guide; message me on Discord or make a pull r
 
 As of November 29, 2022, the GAMMA installer uses powershell;  
 As far as I know, <ins>there is not a way to run the installer on Linux.</ins>  
-A few people have tried it with powershell for Linux, it has not worked so far.
+A few people have tried it with powershell for Linux, it has not worked so far.  
 Grok has plans to rebuild the installer without powershell eventually.  
 I recommend you boot up Windows (VM or otherwise) and install GAMMA there following the standard installation instructions, <ins>***CONFIRM IT WORKS***</ins>, including that the proper number of mods are enabled and that the game runs, and then copy the files over;  
 Depending on how you choose to copy the files over, you may leave some behind in the process due to folder/file name lengths.  
