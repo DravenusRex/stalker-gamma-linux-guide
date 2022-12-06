@@ -6,10 +6,13 @@
 If you are looking for a Steam Deck guide, check [this guide](https://github.com/maxastyler/S.T.A.L.K.E.R.-Gamma-Steam-Deck-Install-Guide/) out.  
 
 DISCLAIMER:
-This guide is more of a compilation of info that I have gathered together from others in the GAMMA and Linux community that I have simply put together along with a few of my own findings. This guide may not work *for you*, everybody has a different set-up, there may also be things I have forgotten to mention here, my methodology may seem strange to experienced users, and there are liekly typos. That being said I am fairly confident this will work for most people.
+This guide is more of a compilation of info that I have gathered together from others in the GAMMA and Linux community that I have simply put together along with a few of my own findings. This guide may not work *for you*, everybody has a different set-up, there may also be things I have forgotten to mention here, my methodology may seem strange to experienced users, and there are liekly typos. That being said I am fairly confident this will work for most people.  
 
-You can message me on Discord, "Dravenus Rex#5373", please avoid asking GAMMA support for help, they do not currently support Linux, and can only do so much to help anyway.  
-If you have any info to add to the guide; message me on Discord or make a pull request.
+I don't use Discord anymore, if you need help and you can't get it anywhere else, make an issue.  
+I will _still be merging pull requests_, but since I'm not using Discord, and it is a prerequesite to install GAMMA, I won't be updating the guide with my own findings. If you are unhappy about this, please fork it and do it yourself.
+
+~~You can message me on Discord, "Dravenus Rex#5373",~~ please avoid asking GAMMA support for help, they do not currently support Linux, and can only do so much to help anyway.  
+If you have any info to add to the guide; ~~message me on Discord or~~ make a _pull request_.
 
 As of November 29, 2022, the GAMMA installer uses powershell;  
 As far as I know, <ins>there is not a way to run the installer on Linux.</ins>  
