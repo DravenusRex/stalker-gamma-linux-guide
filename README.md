@@ -1,5 +1,5 @@
 # stalker-gamma-linux-guide
-<h3>Unofficially forked from [this git](https://github.com/DravenusRex/stalker-gamma-linux-guide) by [DravenusRex](https://github.com/DravenusRex/)</h3>
+<h3>Unofficially forked from [this git](https://github.com/DravenusRex/stalker-gamma-linux-guide) by [DravenusRex](https://github.com/DravenusRex/) in case of prolonged inactivity.</h3>
 <h4>Updated by me. If you would like to propose a change but you're too lazy to use github, send me an email (Discord dms suck for this) at trash-hell@sren.solutions</h4>
 
 <h3>A guide to getting S.T.A.L.K.E.R. - G.A.M.M.A. running on GNU/Linux.</h3>  
