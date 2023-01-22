@@ -1,19 +1,20 @@
 # stalker-gamma-linux-guide
-<h3>Unofficially forked from [this git](https://github.com/DravenusRex/stalker-gamma-linux-guide) by [DravenusRex](https://github.com/DravenusRex/) in case of prolonged inactivity.</h3>
-<h4>Updated by me. If you would like to propose a change but you're too lazy to use github, send me an email (Discord dms suck for this) at trash-hell@sren.solutions</h4>
 
 <h3>A guide to getting S.T.A.L.K.E.R. - G.A.M.M.A. running on GNU/Linux.</h3>  
 <h4>(Henceforth referred to as Linux, cope.)</h4>
 
-<br>
 
-If you are looking for a Steam Deck guide, check [this guide](https://github.com/maxastyler/S.T.A.L.K.E.R.-Gamma-Steam-Deck-Install-Guide/) out.  
+
+*If you are looking for a Steam Deck guide, check [this guide](https://github.com/maxastyler/S.T.A.L.K.E.R.-Gamma-Steam-Deck-Install-Guide/) out.*
 
 <h4>DISCLAIMER:</h4>
-This guide is more of a compilation of info that I have gathered together from others in the GAMMA and Linux community that I have simply put together along with a few of my own findings. This guide may not work *for you*, everybody has a different set-up, there may also be things I have forgotten to mention here, my methodology may seem strange to experienced users, and there are liekly typos. That being said I am fairly confident this will work for most people.  
+
+This guide is more of a compilation of info that I have gathered together from others in the GAMMA and Linux community that I have simply put together along with a few of my own findings. This guide may not work *for you,* everybody has a different set-up, there may also be things I have forgotten to mention here, my methodology may seem strange to experienced users, and there are liekly typos. That being said I am fairly confident this will work for most people.  
 
 I don't use Discord anymore, if you need help and you can't get it anywhere else, make an issue.  
 I will _still be merging pull requests_, but since I'm not using Discord, and it is a prerequesite to install GAMMA, I won't be updating the guide with my own findings. If you are unhappy about this, please fork it and do it yourself.
+
+<br>
 
 <ins>***Avoid asking GAMMA support for help with Linux,***</ins> they do not currently support Linux, and can only do so much to help anyway.
 If you have any info to add to the guide; make a _pull request_.
@@ -29,7 +30,11 @@ Depending on how you choose to copy the files over, you may leave some behind in
 - A shared folder in your VM between your Linux host and Windows 10 guest would be optimal for this, if supported by your choice of VM.
 - Otherwise, consider using an external storage drive, a USB drive, or similar physical methods for high speed transferring. You could upload the compressed file to a service such as Mega and re-download it if not possible, but it may not be viable depending on your internet upload/download speed or data caps.
 
+<br>
+
 <h4>Okay, you have the GAMMA files installed, copied over, and ready to go, now what?</h4>
+
+<br>
 
 You have two good options, running the game through Lutris with Wine, or through Steam with Proton.  
 I will be covering the Lutris/Wine route, because that is what has worked *for me* and a few others.  
@@ -39,9 +44,9 @@ I will be assuming that you have used Lutris/Wine before and know the basics of 
 Add ModOrganizer.exe to Lutris, and then configure as follows:  
 
 Try using the Proton Wine version. It should offer you higher FPS (almost native) and smoother mouse movement compared to other runners.
-If Lutris Proton is your choice, consider setting your GAMMA Wineconfig's version to Windows 10. It may help with FPS even more.
+If Lutris Proton is your choice, consider setting your GAMMA Wineconfig's version to Windows 10. It should help with FPS even more.
 
-However, the built in Wine versions that come with Lutris may not work *for you*, if not, experiment (Possibly try the latest Wine development branch next.)
+However, the built in Wine versions that come with Lutris may not work *for you*, if not, experiment (Possibly try the latest Wine development branch.)
 
 Make sure DXVK and VKD3D are enabled.
 - Esync *may* cause issues, disable it if unsure.
@@ -73,9 +78,12 @@ You can close the settings window now, next you need to tell MO2 where the game 
 In the large drop down menu next to the Play button, click "<Edit...>"
 Select Anomaly Launcher in the list, for the Binary path, you want to point it to AnomalyLauncher.exe, it will be in the root folder of the game (Anomaly), it will probably take you to the right place by default.
 For the Start in path, point it at the folder which AnomalyLauncher.exe is in, you can copy the path you set from above and remove "AnomalyLauncher.exe" from it.
-- Eg. \Games\Anomaly\Anomaly Vanilla\AnomalyLauncher.exe  -->  \Games\Anomaly\Anomaly Vanilla\
-- Mod Organizer 2 will automatically turn a forward slash into a backslash, so you can copy the path directly from your file browser.
+- Eg. Z:\home\yourusername\Games\GAMMA\Anomaly Vanilla\AnomalyLauncher.exe  -->  Z:\home\yourusername\Games\GAMMA\Anomaly Vanilla\
+- Mod Organizer 2 will automatically turn a forward slash into a backslash, so you can copy the path of your .exe file directly from your file browser. However, you will have to add Z: in front of / before clicking Apply/OK.
+
 If you want to configure the other executables, you can do so, they are contained within the bin folder at the root of the game, however it isn't necessary.
+
+<br>
 
 At this point, you should be able to run AnomalyLauncher through MO2, launch the game, and the game should at least run, although with a few issues:
 
@@ -104,15 +112,13 @@ It's compatible with existing ReShade presets, and runs natively on Linux.
 - If you want to mess around with the shader menu in game, make a save first. It does not block mouse input from the game, and you might end up throwing a grenade and causing a faction war. Also, for this reason it would not be recommended for a permadeath run.
 
 iii.
-The FPS limiter present in the graphics settings may lead to choppiness and sharp screen tearing. Consider using VSync without the FPS limiter instead. (This was tested with Nvidia's proprietary Linux drivers and may not apply to you.)
+The FPS limiter present in the graphics settings may lead to choppiness and sharp screen tearing. Consider using VSync without the FPS limiter instead. (This was tested with Nvidia's proprietary Linux drivers on plain Arch Linux and may not at all apply to you.)
 
 
 <h4>By now, you should have a fully playable (though likely imperfect) S.T.A.L.K.E.R. - G.A.M.M.A. experience on Linux.</h4>
 
 
 <h3>Thanks to:</h3>
-
-[DravenusRex](https://github.com/DravenusRex/) - Writing the original guide.
 
 no.#3094 (LafreSita) - Groundwork for the wineprefix.  
 
