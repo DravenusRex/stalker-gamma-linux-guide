@@ -37,11 +37,15 @@ I will be covering the Lutris/Wine route, because that is what has worked *for m
 
 I will be assuming that you have used Lutris/Wine before and know the basics of configuration.  
 Add ModOrganizer.exe to Lutris, and then configure as follows:  
+
 Try using the Proton Wine version. It should offer you higher FPS (almost native) and smoother mouse movement compared to other runners.
 If Lutris Proton is your choice, consider setting your GAMMA Wineconfig's version to Windows 10. It may help with FPS even more.
+
 However, the built in Wine versions that come with Lutris may not work *for you*, if not, experiment (Possibly try the latest Wine development branch next.)
-Make sure DXVK and VKD3D are enabled.  
-Esync *may* cause issues, disable it if unsure.
+
+Make sure DXVK and VKD3D are enabled.
+- Esync *may* cause issues, disable it if unsure.
+
 For the wineprefix, enable the following DLLs:  
 - cmd
 - d3dcompiler_47
@@ -91,19 +95,23 @@ Close GAMMA and MO2, navigate to the Anomaly folder, open the bin folder, and in
 - ReShade.ini
 
 iia.
-If you cannot go without fancy shaders, consider using [GShade](https://github.com/HereInPlainSight/gshade_installer) instead. It's compatible with existing ReShade presets, and runs natively on Linux. Install to custom game, say yes to dxgi, and point the executable selection to the single specific /bin/ .exe you wish to use it with (Eg. AnomalyDX10.exe OR AnomalyDX10AVX.exe)
-- Move your G.A.M.M.A.Reshade.ini from the /bin/ folder into the newly created /bin/gshade-presets/Custom/ folder and navigate to it in GShade. It might need a moment to compile after being selected.
-- Should work out of the box, but will lag to death on your first load using it as it has to compile ~230 shaders.
+If you cannot go without fancy shaders, consider using [GShade](https://github.com/HereInPlainSight/gshade_installer) instead. 
+
+It's compatible with existing ReShade presets, and runs natively on Linux. 
+- Do install to custom game, say yes to dxgi, and point the executable selection to the single specific /bin/ .exe you wish to use it with (Eg. AnomalyDX10.exe OR AnomalyDX10AVX.exe)
+- Move your G.A.M.M.A.Reshade.ini from the /bin/ folder into the newly created /bin/gshade-presets/Custom/ folder and navigate to it in GShade while loaded into GAMMA. It might need a moment to compile after being selected.
+- Should work out of the box, but it will lag GAMMA hard on your first save load as it has to compile ~230 shaders.
 - If you want to mess around with the shader menu in game, make a save first. It does not block mouse input from the game, and you might end up throwing a grenade and causing a faction war. Also, for this reason it would not be recommended for a permadeath run.
 
 iii.
-The FPS limiter present in the graphics settings may lead to choppiness and sharp screen tearing. Consider using VSync without the FPS limiter instead. (This was tested with Nvidia's proprietary Linux drivers and may not at all apply to you.)
+The FPS limiter present in the graphics settings may lead to choppiness and sharp screen tearing. Consider using VSync without the FPS limiter instead. (This was tested with Nvidia's proprietary Linux drivers and may not apply to you.)
 
 
-By now, you should have a fully playable (though likely imperfect) S.T.A.L.K.E.R. - G.A.M.M.A. experience on Linux.
+<h4>By now, you should have a fully playable (though likely imperfect) S.T.A.L.K.E.R. - G.A.M.M.A. experience on Linux.</h4>
 
 
-Thanks to:  
+<h3>Thanks to:</h3>
+
 [DravenusRex](https://github.com/DravenusRex/) - Writing the original guide.
 
 no.#3094 (LafreSita) - Groundwork for the wineprefix.  
