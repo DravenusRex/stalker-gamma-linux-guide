@@ -118,6 +118,8 @@ The FPS limiter present in the graphics settings may lead to choppiness and shar
 
 
 <h3>Thanks to:</h3>
+ 
+[All the Contributors](https://github.com/DravenusRex/stalker-gamma-linux-guide/graphs/contributors)  
 
 no.#3094 (LafreSita) - Groundwork for the wineprefix.  
 
