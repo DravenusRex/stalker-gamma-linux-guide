@@ -1,10 +1,3 @@
-# stalker-gamma-linux-guide
-
-<h4>Temporary fork of the original guide by DravenusRex made from uncertainty.</h4>
-
-If you have something major to add, you could either make a merge request, or in the case of prolonged inactivity, fork it. If it's something minor or a question, send me an email at ' trash-hell@sren.solutions ' and I'll find a way to put it and the answer/solution in here somehow. Please try your best at clarity, and include your Discord tag if you prefer communicating that way. 
-
-Will be push requested into main when relevant.
 
 <h1>A guide to getting S.T.A.L.K.E.R. - G.A.M.M.A. running on GNU/Linux.</h1>  
 <h4>(Henceforth referred to as Linux, cope.)</h4>
