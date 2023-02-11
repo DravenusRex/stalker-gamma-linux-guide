@@ -94,21 +94,12 @@ The game window might not properly size to your screen, and might just even appe
 
 ii.  
 You may have severe stuttering if you press keys rapidly and move your mouse simultaneously, if this is the case, remove reshade;  
-Close GAMMA and MO2, navigate to the Anomaly folder, open the bin folder, and inside delete (or better yet move to another location):
+Close GAMMA and MO2, navigate to the Anomaly folder, open the bin folder, and inside delete (or better yet move to another location until someone figures out how to properly fix this):
 - reshade-shaders
 - d3d9.dll
 - dxgi.dll
-- G.A.M.M.A.Reshade.ini    (If following the next step to use shaders on Linux, do not delete this file.)
+- G.A.M.M.A.Reshade.ini
 - ReShade.ini
-
-iia.
-If you cannot go without fancy shaders, consider using [GShade](https://github.com/HereInPlainSight/gshade_installer) instead. 
-
-It's compatible with existing ReShade presets, and runs natively on Linux. 
-- Do install to custom game, say yes to dxgi, and point the executable selection to the single specific /bin/ .exe you wish to use it with (Eg. AnomalyDX10.exe OR AnomalyDX10AVX.exe)
-- Move your G.A.M.M.A.Reshade.ini from the /bin/ folder into the newly created /bin/gshade-presets/Custom/ folder and navigate to it in GShade while loaded into GAMMA. It might need a moment to compile after being selected.
-- Should work out of the box, but it will lag GAMMA hard on your first save load as it has to compile ~230 shaders.
-- If you want to mess around with the shader menu in game, make a save first. It does not block mouse input from the game, and you might end up throwing a grenade and causing a faction war. Also, for this reason it would not be recommended for a permadeath run.
 
 iii.
 The FPS limiter present in the graphics settings may lead to choppiness and sharp screen tearing. Consider using VSync without the FPS limiter instead. (This was tested with Nvidia's proprietary Linux drivers on plain Arch Linux and may not at all apply to you.)
