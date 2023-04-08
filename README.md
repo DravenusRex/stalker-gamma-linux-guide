@@ -92,16 +92,7 @@ The game window might not properly size to your screen, and might just even appe
 - Change rs__screenmode (fullscreen/borderless/windowed), different options work for different set-ups.
 - Double check that vid_mode is set correctly according to your display, e.g. vid_mode 1920x1080
 
-ii.  
-You may have severe stuttering if you press keys rapidly and move your mouse simultaneously, if this is the case, remove reshade;  
-Close GAMMA and MO2, navigate to the Anomaly folder, open the bin folder, and inside delete (or better yet move to another location until someone figures out how to properly fix this):
-- reshade-shaders
-- d3d9.dll
-- dxgi.dll
-- G.A.M.M.A.Reshade.ini
-- ReShade.ini
-
-iii.
+ii.
 The FPS limiter present in the graphics settings may lead to choppiness and sharp screen tearing. Consider using VSync without the FPS limiter instead. (This was tested with Nvidia's proprietary Linux drivers on plain Arch Linux and may not at all apply to you.)
 
 
