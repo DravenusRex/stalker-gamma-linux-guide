@@ -18,18 +18,16 @@ I will _still be merging pull requests_, but since I'm not using Discord, and it
 <ins>***Avoid asking GAMMA support for help with Linux,***</ins> they do not currently support Linux, and can only do so much to help anyway.
 If you have any info to add to the guide; make a _pull request_.
 
-As of April 8, 2023, the GAMMA installer uses powershell;  
+As of April 26, 2023, the GAMMA installer uses powershell;
 As far as I know, <ins>there is not a way to run the installer on Linux.</ins>  
 A few people have tried it with powershell for Linux, it has not worked so far.  
 Grok has plans to rebuild the installer without powershell eventually.  
 
-I recommend you boot up Windows (VM or otherwise), with 130GB (or 140GB to be safe) of free storage, and install GAMMA there following the standard installation instructions, <ins>***CONFIRM IT WORKS***</ins>, including that the proper number of mods are enabled and that the game launches to the main menu, and then copy the files over.
-Depending on how you choose to copy the files over, you may leave some behind in the process due to folder/file name lengths.  
-- An easy way to avoid this is by compressing before transferring, and then extracting in Linux. A .7z with a compression level of 5 leaves this with a bit over 30GB to transfer.
-- A shared folder in your VM between your Linux host and Windows 10 guest would be optimal for this, if supported by your choice of VM.
-- Otherwise, consider using an external storage drive, a USB drive, or similar physical methods for high speed transferring. You could upload the compressed file to a service such as Mega and re-download it if not possible, but it may not be viable depending on your internet upload/download speed or data caps.
+However, you can use a python implementation of this launcher [here](https://github.com/Mord3rca/gamma-launcher)
 
-<br>
+Install Anomaly & GAMMA like the official guide says and instead of running GAMMA Installer, use `gamma-launcher full-install --anomaly <anomaly dir> --gamma <gamma dir>`
+
+Everything will be setup as close as the official installer.
 
 <h4>Okay, you have the GAMMA files installed, copied over, and ready to go, now what?</h4>
 
