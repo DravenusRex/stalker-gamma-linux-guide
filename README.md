@@ -74,8 +74,8 @@ All done with settings.
 
 At this point, you should be able to run AnomalyLauncher through MO2, launch the game, and the game should at least run, although with a few issues:
 
-1.  The game window might not properly size to your screen, and might just even appear as a small black window, if this is the case:  
-&nbsp;&nbsp;&nbsp;&nbsp;- Edit the user.ltx file found in <anomaly path>/appdata/  
+1.  The game window might not properly size to your screen (especially if you alt tab), or may appear as a small black window, if this is the case:  
+&nbsp;&nbsp;&nbsp;&nbsp;- Edit the user.ltx file found in <Anomaly path>/appdata/  
 &nbsp;&nbsp;&nbsp;&nbsp;- Change rs__screenmode (fullscreen|borderless|windowed), different options work for different set-ups.  
 &nbsp;&nbsp;&nbsp;&nbsp;- Double check that vid_mode is set correctly according to your display, e.g. vid_mode 1920x1080  
 
