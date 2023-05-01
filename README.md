@@ -8,93 +8,77 @@
 
 <h4>DISCLAIMER:</h4>
 
-This guide is more of a compilation of info that I have gathered together from others in the GAMMA and Linux community that I have simply put together along with a few of my own findings. This guide may not work *for you,* everybody has a different set-up, there may also be things I have forgotten to mention here, my methodology may seem strange to experienced users, and there are liekly typos. That being said I am fairly confident this will work for most people.  
-
-I don't use Discord anymore, if you need help and you can't get it anywhere else, make an issue.  
-I will _still be merging pull requests_, but since I'm not using Discord, and it is a prerequesite to install GAMMA, I won't be updating the guide with my own findings. If you are unhappy about this, please fork it and do it yourself.
-
-<br>
+This guide is a compilation of info that I have gathered together from others in the GAMMA and Linux community.  
+This guide may not work *for you,* everybody has a different set-up.  
+This guide assumes you have basic pre-requisite knowledge on using tools like Lutris, Wine, Proton, or whatever you choose.  
+If you do not know how to use these tools, there are other resources out there.  
+If you need help or have a problem; make an issue.  
+If you have any info to add to the guide; feel free to make a PR.  
 
 <ins>***Avoid asking GAMMA support for help with Linux,***</ins> they do not currently support Linux, and can only do so much to help anyway.
-If you have any info to add to the guide; make a _pull request_.
 
-As of April 26, 2023, the GAMMA installer uses powershell;
-As far as I know, <ins>there is not a way to run the installer on Linux.</ins>  
+
+As of April 30, 2023, the GAMMA installer uses powershell;
+As far as I know, <ins>there's no way to run Grok's installer on Linux.</ins>  
 A few people have tried it with powershell for Linux, it has not worked so far.  
 Grok has plans to rebuild the installer without powershell eventually.  
 
-However, you can use a python implementation of this launcher [here](https://github.com/Mord3rca/gamma-launcher)
+However, Mord3rca built a [Linux compatible python-based launcher here.](https://github.com/Mord3rca/gamma-launcher)  
+You should go and get that installed and ready to go before you continue.  
+If you don't want to go that route, your other option is using Grok's launcher on a Windows VM/dual boot, check this [old branch.](https://github.com/DravenusRex/stalker-gamma-linux-guide/tree/vm-method)  
+I very highly recommend using Mord3rca's launcher, it already works wonderfully, and he's continuing to improve it.  
+Everything will be setup as close as the official installer as possible.  
 
-Install Anomaly & GAMMA like the official guide says and instead of running GAMMA Installer, use `gamma-launcher full-install --anomaly <anomaly dir> --gamma <gamma dir>`
+<h4>Okay, you have Mord3rca's launcher set up and ready to go, now what?</h4>
 
-Everything will be setup as close as the official installer.
+Follow the installation instructions as normal in the GAMMA discord server, all the way up until it says to use Grok's launcher.
+When it tells you to run Anomaly for the set-up, use your preferred method, I recommend Lutris with Wine 8.0+ for reasons that I will cover later.
+Quick rundown for Lutris, this isn't all required to get vanilla Anomaly running, but it will get GAMMA and MO2 running:  
+1. Disable Lutris Runtime  
+2. Wineprefix DLLs:  
+&nbsp;&nbsp;&nbsp;&nbsp;- cmd  
+&nbsp;&nbsp;&nbsp;&nbsp;- d3dcompiler_47  
+&nbsp;&nbsp;&nbsp;&nbsp;- d3dx10  
+&nbsp;&nbsp;&nbsp;&nbsp;- d3d11_43  
+&nbsp;&nbsp;&nbsp;&nbsp;- d3dx9  
+&nbsp;&nbsp;&nbsp;&nbsp;- dx8vb  
+&nbsp;&nbsp;&nbsp;&nbsp;- dxvk  
+&nbsp;&nbsp;&nbsp;&nbsp;- quartz  
+&nbsp;&nbsp;&nbsp;&nbsp;- vcrun2019  
+3. Make sure DXVK and VKD3D are enabled, Esync *may* cause issues, disable it if unsure.
+  
+After doing this, the key things you should have at this point are:  
+- A GAMMA directory which contains the extracted contents of GAMMA RC3.7z and downloads.7z
+- An Anomaly directory containing the extracted contents of Anomaly-1.5.1.7z and Anomaly-1.5.1-to-1.5.2-Update.7z, which you ran.
 
-<h4>Okay, you have the GAMMA files installed, copied over, and ready to go, now what?</h4>
+Once you've done this, you may wish to check the integrity of your GAMMA folder:  
+`gamma-launcher check-md5 --gamma <GAMMA path>`  
+Then you can run the installer with:  
+`gamma-launcher full-install --anomaly <anomaly path> --gamma <GAMMA path>`
 
-<br>
-
-You have two good options, running the game through Lutris with Wine, or through Steam with Proton.  
-I will be covering the Lutris/Wine route, because that is what has worked *for me* and a few others.  
-<ins>If you are interested in going down the Steam/Proton road, then look at [this guide](https://github.com/maxastyler/S.T.A.L.K.E.R.-Gamma-Steam-Deck-Install-Guide/).</ins>
-
-I will be assuming that you have used Lutris/Wine before and know the basics of configuration.  
-Add ModOrganizer.exe to Lutris, and then configure as follows:  
-
-Try using the Proton Wine version. It should offer you higher FPS (almost native) and smoother mouse movement compared to other runners.
-If Lutris Proton is your choice, consider setting your GAMMA Wineconfig's version to Windows 10. It should help with FPS even more.
-
-However, the built in Wine versions that come with Lutris may not work *for you*, if not, experiment (Possibly try the latest Wine development branch.)
-
-Make sure DXVK and VKD3D are enabled.
-- Esync *may* cause issues, disable it if unsure.
-
-For the wineprefix, enable the following DLLs:  
-- cmd
-- d3dcompiler_47
-- d3dx10
-- d3d11_43
-- d3dx9
-- dx8vb
-- dxvk
-- quartz
-- vcrun2019
-
-With that, you should now atleast be able to launch Mod Organizer (henceforth MO2), and configure further from there;
-
-Since you installed GAMMA in Windows, and then copied over the files, your file paths will be messed up, this is why MO2 is asking you where your game is, when you click browse it will open up the Wine file system, find your Anomaly folder and point MO2 to it.
-
-You should be looking at the main MO2 window now, if UI elements are missing (black boxes etc.), try changing Wine versions.  
-Confirm that the proper number of mods are enabled, you can find the correct number in the GAMMA discord.  
-If this number is 0, you did not give MO2 the correct path to your game, you can change the path to your game in the following settings window under the "Paths" tab.  
-If it's another number, something bad happened during the file transfer, or you didn't confirm the game was proper under Windows.  
-Ctrl+S will open a settings window, if that doesn't work, top left>Tools>Settings.  
+After that, all you need to do is Launch MO2 and point it to Anomaly if it asks.
+Next, we should change some settings(Ctrl+S)
+Confirm that the proper number of mods are enabled, you can find the correct number in the GAMMA discord.
+If this number is 0, you did not give MO2 the correct path to your game, you can change the path to your game in the Paths tab.  
+If it's another number, you are going to have to do some troubleshooting of your own.  
 Go to the Theme tab and choose 1809 Dark Mode.  
-Go to the General tab on untick "Check for updates", this hasn't caused any issues yet, but just in case.  
-You can close the settings window now, next you need to tell MO2 where the game executables are.  
-
-In the large drop down menu next to the Play button, click "<Edit...>"
-Select Anomaly Launcher in the list, for the Binary path, you want to point it to AnomalyLauncher.exe, it will be in the root folder of the game (Anomaly), it will probably take you to the right place by default.
-For the Start in path, point it at the folder which AnomalyLauncher.exe is in, you can copy the path you set from above and remove "AnomalyLauncher.exe" from it.
-- Eg. Z:\home\yourusername\Games\GAMMA\Anomaly Vanilla\AnomalyLauncher.exe  -->  Z:\home\yourusername\Games\GAMMA\Anomaly Vanilla\
-- Mod Organizer 2 will automatically turn a forward slash into a backslash, so you can copy the path of your .exe file directly from your file browser. However, you will have to add Z: in front of / before clicking Apply/OK.
-
-If you want to configure the other executables, you can do so, they are contained within the bin folder at the root of the game, however it isn't necessary.
+Go to the General tab on untick "Check for updates", this hasn't caused any issues yet, but just in case.
+All done with settings.
 
 <br>
 
 At this point, you should be able to run AnomalyLauncher through MO2, launch the game, and the game should at least run, although with a few issues:
 
-i.  
-The game window might not properly size to your screen, and might just even appear as a small black window, if this is the case:
-- Edit the user.ltx file found in /Anomaly/appdata/
-- Change rs__screenmode (fullscreen/borderless/windowed), different options work for different set-ups.
-- Double check that vid_mode is set correctly according to your display, e.g. vid_mode 1920x1080
+1.  The game window might not properly size to your screen, and might just even appear as a small black window, if this is the case:  
+&nbsp;&nbsp;&nbsp;&nbsp;- Edit the user.ltx file found in <anomaly path>/appdata/  
+&nbsp;&nbsp;&nbsp;&nbsp;- Change rs__screenmode (fullscreen|borderless|windowed), different options work for different set-ups.  
+&nbsp;&nbsp;&nbsp;&nbsp;- Double check that vid_mode is set correctly according to your display, e.g. vid_mode 1920x1080  
 
-ii.
-The FPS limiter present in the graphics settings may lead to choppiness and sharp screen tearing. Consider using VSync without the FPS limiter instead. (This was tested with Nvidia's proprietary Linux drivers on plain Arch Linux and may not at all apply to you.)
+2.  The FPS limiter present in the graphics settings may lead to choppiness and sharp screen tearing.  
+&nbsp;&nbsp;&nbsp;&nbsp;- Consider using VSync without the FPS limiter instead.
 
 
-<h4>By now, you should have a fully playable (though likely imperfect) S.T.A.L.K.E.R. - G.A.M.M.A. experience on Linux.</h4>
+<h4>By now, you should have a playable S.T.A.L.K.E.R. - G.A.M.M.A. on Linux.</h4>
 
 
 <h3>Thanks to:</h3>
@@ -103,9 +87,13 @@ The FPS limiter present in the graphics settings may lead to choppiness and shar
 
 no.#3094 (LafreSita) - Groundwork for the wineprefix.  
 
-yeyande#9033 (yeyande) - Unintentionally helping me find the cause of the key repeat stutter.  
-
-maxastyler and his [Steam Deck Guide](https://github.com/maxastyler/S.T.A.L.K.E.R.-Gamma-Steam-Deck-Install-Guide/)
+yeyande#9033 (yeyande) - Helping me solve key repeat stutter.  
+ 
+<h3>Special thanks:</h3>
+  
+[maxastyler](https://github.com/maxastyler) for his [Steam Deck Guide.](https://github.com/maxastyler/S.T.A.L.K.E.R.-Gamma-Steam-Deck-Install-Guide/)  
+ 
+[Mord3rca](https://github.com/Mord3rca) for his [launcher.](https://github.com/Mord3rca/gamma-launcher)
 
 
 
