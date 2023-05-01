@@ -10,7 +10,7 @@
 
 This guide is a compilation of info that I have gathered together from others in the GAMMA and Linux community.  
 This guide may not work *for you,* everybody has a different set-up.  
-This guide assumes you have basic pre-requisite knowledge on using tools like Lutris, Wine, Proton, or whatever you choose.  
+This guide assumes you have pre-requisite knowledge to use tools like Lutris, Wine, Proton, or whatever you choose.  
 If you do not know how to use these tools, there are other resources out there.  
 If you need help or have a problem; make an issue.  
 If you have any info to add to the guide; feel free to make a PR.  
