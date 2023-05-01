@@ -58,14 +58,17 @@ Once you've done this, you may wish to check the integrity of your GAMMA folder:
 Then you can run the installer with:  
 `gamma-launcher full-install --anomaly <anomaly path> --gamma <GAMMA path>`
 
-After that, all you need to do is Launch MO2 and point it to Anomaly if it asks.
-Next, we should change some settings(Ctrl+S)
-Confirm that the proper number of mods are enabled, you can find the correct number in the GAMMA discord.
-If this number is 0, you did not give MO2 the correct path to your game, you can change the path to your game in the Paths tab.  
-If it's another number, you are going to have to do some troubleshooting of your own.  
-Go to the Theme tab and choose 1809 Dark Mode.  
-Go to the General tab on untick "Check for updates", this hasn't caused any issues yet, but just in case.
-All done with settings.
+After that, add Mod Organizer (\<GAMMA path\>/ModOrganizer.exe) to Lutris, you can use the same wineprefix and settings as before.  
+Launch Mod Organizer. It might provide an error saying "Cannot open instance 'Portable'..."  
+Click OK, and then Browse and select your Anomaly folder; an easy way to find it is clicking "My Computer" and going to the "Z" drive.  
+You will notice it represents your native Linux filesystem.  
+After you select your Anomaly folder, another error may appear saying "The selected profile 'Default' does not exist...", you can ignore this.
+
+If you did it right, you should have the proper number of mods, this number can be found in the GAMMA discord.  
+If this number is 0, you didn't give it the correct path to your game, you can change it in the settings (Ctrl+S).  
+If it's another number, you are going to have to do some troubleshooting.  
+While you're in the settings, go to the Theme tab and choose 1809 Dark Mode, then go to the General tab and untick "Check for updates".   
+All done with settings.  
 
 <br>
 
