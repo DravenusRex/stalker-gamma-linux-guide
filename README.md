@@ -32,8 +32,9 @@ Everything will be setup as close as the official installer as possible.
 <h4>Okay, you have Mord3rca's launcher set up and ready to go, now what?</h4>
 
 Follow the installation instructions as normal in the GAMMA discord server, all the way up until it says to use Grok's launcher.
-When it tells you to run Anomaly for the set-up, use your preferred method, I recommend Lutris with Wine 8.0+ for reasons that I will cover later.
-Quick rundown for Lutris, this isn't all required to get vanilla Anomaly running, but it will get GAMMA and MO2 running:  
+When it tells you to run Anomaly for the set-up, use your preferred method, I recommend Lutris with Wine 8.0+ since it now supports ReShade.  
+
+Quick rundown for Lutris:  
 1. Disable Lutris Runtime  
 2. Wineprefix DLLs:  
 &nbsp;&nbsp;&nbsp;&nbsp;- cmd  
@@ -46,6 +47,7 @@ Quick rundown for Lutris, this isn't all required to get vanilla Anomaly running
 &nbsp;&nbsp;&nbsp;&nbsp;- quartz  
 &nbsp;&nbsp;&nbsp;&nbsp;- vcrun2019  
 3. Make sure DXVK and VKD3D are enabled, Esync *may* cause issues, disable it if unsure.
+  
   
 After doing this, the key things you should have at this point are:  
 - A GAMMA directory which contains the extracted contents of GAMMA RC3.7z and downloads.7z
@@ -75,12 +77,10 @@ At this point, you should be able to run AnomalyLauncher through MO2, launch the
 &nbsp;&nbsp;&nbsp;&nbsp;- Double check that vid_mode is set correctly according to your display, e.g. vid_mode 1920x1080  
 
 2.  The FPS limiter present in the graphics settings may lead to choppiness and sharp screen tearing.  
-&nbsp;&nbsp;&nbsp;&nbsp;- Consider using VSync without the FPS limiter instead.
-
-
-<h4>By now, you should have a playable S.T.A.L.K.E.R. - G.A.M.M.A. on Linux.</h4>
-
-
+&nbsp;&nbsp;&nbsp;&nbsp;- Consider using VSync without the FPS limiter instead.  
+  <br>
+<h3>By now, you should have a playable S.T.A.L.K.E.R. - G.A.M.M.A. on Linux.</h3>
+  <br>
 <h3>Thanks to:</h3>
  
 [All the Contributors](https://github.com/DravenusRex/stalker-gamma-linux-guide/graphs/contributors)  
