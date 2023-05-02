@@ -17,9 +17,8 @@ If you have any info to add to the guide; feel free to make a PR.
 
 <ins>***Avoid asking GAMMA support for help with Linux,***</ins> they do not currently support Linux, and can only do so much to help anyway.
 
-
-As of May 1, 2023, the GAMMA installer uses powershell;  
-As far as I know, <ins>there's no way to run Grok's installer on Linux.</ins>  
+As of April 26, 2023, the GAMMA installer uses powershell;  
+As far as I know, <ins>there is not a way to run the installer on Linux.</ins>  
 A few people have tried it with powershell for Linux, it has not worked so far.  
 Grok has plans to rebuild the installer without powershell eventually.  
 
