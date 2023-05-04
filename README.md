@@ -8,26 +8,25 @@
 
 <h4>DISCLAIMER:</h4>
 
-This guide is more of a compilation of info that I have gathered together from others in the GAMMA and Linux community that I have simply put together along with a few of my own findings. This guide may not work *for you,* everybody has a different set-up, there may also be things I have forgotten to mention here, my methodology may seem strange to experienced users, and there are liekly typos. That being said I am fairly confident this will work for most people.  
-
-I don't use Discord anymore, if you need help and you can't get it anywhere else, make an issue.  
-I will _still be merging pull requests_, but since I'm not using Discord, and it is a prerequesite to install GAMMA, I won't be updating the guide with my own findings. If you are unhappy about this, please fork it and do it yourself.
-
-<br>
+This guide is a compilation of info that I have gathered together from others in the GAMMA and Linux community.  
+This guide may not work *for you,* everybody has a different set-up.  
+This guide assumes you have pre-requisite knowledge to use tools like Lutris, Wine, Proton, or whatever you choose.  
+If you do not know how to use these tools, there are other resources out there.  
+If you need help or have a problem; make an issue.  
+If you have any info to add to the guide; feel free to make a PR.  
 
 <ins>***Avoid asking GAMMA support for help with Linux,***</ins> they do not currently support Linux, and can only do so much to help anyway.
-If you have any info to add to the guide; make a _pull request_.
 
-As of April 8, 2023, the GAMMA installer uses powershell;  
+As of May 4, 2023, the GAMMA installer uses powershell;  
 As far as I know, <ins>there is not a way to run the installer on Linux.</ins>  
 A few people have tried it with powershell for Linux, it has not worked so far.  
 Grok has plans to rebuild the installer without powershell eventually.  
 
-I recommend you boot up Windows (VM or otherwise), with 130GB (or 140GB to be safe) of free storage, and install GAMMA there following the standard installation instructions, <ins>***CONFIRM IT WORKS***</ins>, including that the proper number of mods are enabled and that the game launches to the main menu, and then copy the files over.
-Depending on how you choose to copy the files over, you may leave some behind in the process due to folder/file name lengths.  
-- An easy way to avoid this is by compressing before transferring, and then extracting in Linux. A .7z with a compression level of 5 leaves this with a bit over 30GB to transfer.
-- A shared folder in your VM between your Linux host and Windows 10 guest would be optimal for this, if supported by your choice of VM.
-- Otherwise, consider using an external storage drive, a USB drive, or similar physical methods for high speed transferring. You could upload the compressed file to a service such as Mega and re-download it if not possible, but it may not be viable depending on your internet upload/download speed or data caps.
+Boot up Windows (VM or otherwise), and install GAMMA there following the standard installation instructions, <ins>***CONFIRM IT WORKS***</ins>, including that the proper number of mods are enabled and that the game launches to the main menu, and then copy the files over to Linux;
+- Depending on how you choose to copy the files over, you may leave some behind in the process due to folder/file name lengths.  
+- You can avoid that by compressing before transferring. This also saves you a lot of time transferring back to Linux if you have a decent CPU.
+- A shared folder in your VM between your Linux host and Windows guest would be good for this, if your VM can do it, here's a guide for [QEMU/KVM](https://blog.sergeantbiggs.net/posts/file-sharing-with-qemu-and-virt-manager/).
+- Consider using an external storage drive, a USB drive, or something like that. You could also upload to a cloud service.
 
 <br>
 
@@ -36,64 +35,62 @@ Depending on how you choose to copy the files over, you may leave some behind in
 <br>
 
 You have two good options, running the game through Lutris with Wine, or through Steam with Proton.  
-I will be covering the Lutris/Wine route, because that is what has worked *for me* and a few others.  
+I recommend Lutris, using Wine 8.0+ since it now supports ReShade. 
 <ins>If you are interested in going down the Steam/Proton road, then look at [this guide](https://github.com/maxastyler/S.T.A.L.K.E.R.-Gamma-Steam-Deck-Install-Guide/).</ins>
 
-I will be assuming that you have used Lutris/Wine before and know the basics of configuration.  
-Add ModOrganizer.exe to Lutris, and then configure as follows:  
+Quick rundown for Lutris:  
+1. Disable Lutris Runtime  
+2. Wineprefix DLLs:  
+&nbsp;&nbsp;&nbsp;&nbsp;- cmd  
+&nbsp;&nbsp;&nbsp;&nbsp;- d3dcompiler_47  
+&nbsp;&nbsp;&nbsp;&nbsp;- d3dx10  
+&nbsp;&nbsp;&nbsp;&nbsp;- d3d11_43  
+&nbsp;&nbsp;&nbsp;&nbsp;- d3dx9  
+&nbsp;&nbsp;&nbsp;&nbsp;- dx8vb  
+&nbsp;&nbsp;&nbsp;&nbsp;- dxvk  
+&nbsp;&nbsp;&nbsp;&nbsp;- quartz  
+&nbsp;&nbsp;&nbsp;&nbsp;- vcrun2019  
+3. Make sure DXVK and VKD3D are enabled, Esync and Fsync may cause issues, disable it if unsure.
 
-Try using the Proton Wine version. It should offer you higher FPS (almost native) and smoother mouse movement compared to other runners.
-If Lutris Proton is your choice, consider setting your GAMMA Wineconfig's version to Windows 10. It should help with FPS even more.
+With that, you should now atleast be able to launch Mod Organizer and configure further from there;
 
-However, the built in Wine versions that come with Lutris may not work *for you*, if not, experiment (Possibly try the latest Wine development branch.)
+Since you installed GAMMA in Windows, your file paths will be messed up, this is why Mod Organizer is asking you where your game is, when you click browse it will open up the Wine file system, find your Anomaly folder and point Mod Organizer to it.
 
-Make sure DXVK and VKD3D are enabled.
-- Esync *may* cause issues, disable it if unsure.
-
-For the wineprefix, enable the following DLLs:  
-- cmd
-- d3dcompiler_47
-- d3dx10
-- d3d11_43
-- d3dx9
-- dx8vb
-- dxvk
-- quartz
-- vcrun2019
-
-With that, you should now atleast be able to launch Mod Organizer (henceforth MO2), and configure further from there;
-
-Since you installed GAMMA in Windows, and then copied over the files, your file paths will be messed up, this is why MO2 is asking you where your game is, when you click browse it will open up the Wine file system, find your Anomaly folder and point MO2 to it.
-
-You should be looking at the main MO2 window now, if UI elements are missing (black boxes etc.), try changing Wine versions.  
-Confirm that the proper number of mods are enabled, you can find the correct number in the GAMMA discord.  
-If this number is 0, you did not give MO2 the correct path to your game, you can change the path to your game in the following settings window under the "Paths" tab.  
-If it's another number, something bad happened during the file transfer, or you didn't confirm the game was proper under Windows.  
-Ctrl+S will open a settings window, if that doesn't work, top left>Tools>Settings.  
-Go to the Theme tab and choose 1809 Dark Mode.  
-Go to the General tab on untick "Check for updates", this hasn't caused any issues yet, but just in case.  
-You can close the settings window now, next you need to tell MO2 where the game executables are.  
+You should be looking at the main MO2 window now, if UI elements are missing (black boxes etc.), try changing your runner.  
+If you did it right, you should have the proper number of mods, this number can be found in the GAMMA discord.  
+If this number is 0, you didn't give it the correct path to your game, you can change it in the settings (Ctrl+S).  
+If it's another number, you are going to have to do some troubleshooting.  
+In settings(Ctrl+S), go to the Theme tab and choose 1809 Dark Mode, then go to the General tab and untick "Check for updates".   
+All done with settings.
 
 In the large drop down menu next to the Play button, click "<Edit...>"
-Select Anomaly Launcher in the list, for the Binary path, you want to point it to AnomalyLauncher.exe, it will be in the root folder of the game (Anomaly), it will probably take you to the right place by default.
-For the Start in path, point it at the folder which AnomalyLauncher.exe is in, you can copy the path you set from above and remove "AnomalyLauncher.exe" from it.
-- Eg. Z:\home\yourusername\Games\GAMMA\Anomaly Vanilla\AnomalyLauncher.exe  -->  Z:\home\yourusername\Games\GAMMA\Anomaly Vanilla\
-- Mod Organizer 2 will automatically turn a forward slash into a backslash, so you can copy the path of your .exe file directly from your file browser. However, you will have to add Z: in front of / before clicking Apply/OK.
+Select Anomaly Launcher in the list, for the Binary path, you want to point it to <Anomaly path>\AnomalyLauncher.exe.
+For the Start in path, point it at the Anomaly folder, you can copy the path you set from above and remove "AnomalyLauncher.exe" from it.
 
-If you want to configure the other executables, you can do so, they are contained within the bin folder at the root of the game, however it isn't necessary.
+If you need to configure the other executables (if AnomalyLauncher doesn't work), they are contained within the bin folder at the root of the game.
 
 <br>
 
-At this point, you should be able to run AnomalyLauncher through MO2, launch the game, and the game should at least run, although with a few issues:
+At this point, you should be able to run the game through MO2, if AnomalyLauncher doesn't work try running DX# from the drop down instead. 
+Some issues you may or may not encounter:
 
-i.  
-The game window might not properly size to your screen, and might just even appear as a small black window, if this is the case:
-- Edit the user.ltx file found in /Anomaly/appdata/
-- Change rs__screenmode (fullscreen/borderless/windowed), different options work for different set-ups.
-- Double check that vid_mode is set correctly according to your display, e.g. vid_mode 1920x1080
+1.  The game window might not properly size to your screen (especially if you alt tab), or may appear as a small black window, if this is the case:  
+&nbsp;&nbsp;&nbsp;&nbsp;- Edit the user.ltx file found in \<Anomaly path\>/appdata/  
+&nbsp;&nbsp;&nbsp;&nbsp;- Change rs__screenmode (fullscreen|borderless|windowed), different options work for different set-ups.  
+&nbsp;&nbsp;&nbsp;&nbsp;- Double check that vid_mode is set correctly according to your display, e.g. vid_mode 1920x1080  
 
-ii.
-The FPS limiter present in the graphics settings may lead to choppiness and sharp screen tearing. Consider using VSync without the FPS limiter instead. (This was tested with Nvidia's proprietary Linux drivers on plain Arch Linux and may not at all apply to you.)
+
+2.  The FPS limiter present in the graphics settings may lead to choppiness and sharp screen tearing.  
+&nbsp;&nbsp;&nbsp;&nbsp;- Consider using VSync without the FPS limiter instead.  
+ 
+3. Stuttering when you move and look around, this is because you're using ReShade but aren't running the game with Wine 8.0+ or an equivalent fork, you can fix this by:
+* [Removing Reshade.](https://reshade.me/forum/general-discussion/4398-howto-uninstall-reshade)
+* Then deleting shaders_cache \<Anomaly path\>/appdata/.
+* Then removing these mods:
+  * 188- Enhanced Shaders - KennShade
+  * 189- Beef's NVG - theRealBeef
+  * 190- Screen Space Shaders - Ascii1457
+  * 290- Atmospherics Shaders Weathers and Reshade - Hippobot
 
 
 <h4>By now, you should have a fully playable (though likely imperfect) S.T.A.L.K.E.R. - G.A.M.M.A. experience on Linux.</h4>
