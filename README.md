@@ -66,12 +66,13 @@ After you select your Anomaly folder, another error may appear saying "The selec
 If you did it right, you should have the proper number of mods, this number can be found in the GAMMA discord.  
 If this number is 0, you didn't give it the correct path to your game, you can change it in the settings (Ctrl+S).  
 If it's another number, you are going to have to do some troubleshooting.  
-While you're in the settings, go to the Theme tab and choose 1809 Dark Mode, then go to the General tab and untick "Check for updates".   
+In settings(Ctrl+S), go to the Theme tab and choose 1809 Dark Mode, then go to the General tab and untick "Check for updates".   
 All done with settings.  
 
 <br>
 
-At this point, you should be able to run AnomalyLauncher through MO2, launch the game, and the game should at least run, although with a few issues:
+At this point, you should be able to run the game through MO2, if AnomalyLauncher doesn't work try running DX# from the drop down instead. 
+Some issues you may or may not encounter:
 
 1.  The game window might not properly size to your screen (especially if you alt tab), or may appear as a small black window, if this is the case:  
 &nbsp;&nbsp;&nbsp;&nbsp;- Edit the user.ltx file found in <Anomaly path>/appdata/  
@@ -80,6 +81,15 @@ At this point, you should be able to run AnomalyLauncher through MO2, launch the
 
 2.  The FPS limiter present in the graphics settings may lead to choppiness and sharp screen tearing.  
 &nbsp;&nbsp;&nbsp;&nbsp;- Consider using VSync without the FPS limiter instead.  
+  
+3. Stuttering when you move and look around, this is because you're using ReShade but aren't running the game with Wine 8.0+ or an equivalent fork, you can fix this by:
+* Removing Reshade: ```gamma-launcher remove-reshade --anomaly <Anomaly path>```
+* Then purging the shader cache ```gamma-launcher purge-shader-cache --anomaly <Anomaly path>```
+* Then removing these mods:
+  * 188- Enhanced Shaders - KennShade
+  * 189- Beef's NVG - theRealBeef
+  * 190- Screen Space Shaders - Ascii1457
+  * 290- Atmospherics Shaders Weathers and Reshade - Hippobot
   <br>
 <h3>By now, you should have a playable S.T.A.L.K.E.R. - G.A.M.M.A. on Linux.</h3>
   <br>
