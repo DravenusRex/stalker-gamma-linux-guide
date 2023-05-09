@@ -33,19 +33,20 @@ Everything will be setup as close as the official installer as possible.
 Follow the installation instructions as normal in the GAMMA discord server, all the way up until it says to use Grok's launcher.
 When it tells you to run Anomaly for the set-up, use your preferred method, I recommend Lutris with Wine 8.0+ since it now supports ReShade.  
 
-Quick rundown for Lutris:  
-1. Disable Lutris Runtime  
-2. Wineprefix DLLs:  
-&nbsp;&nbsp;&nbsp;&nbsp;- cmd  
-&nbsp;&nbsp;&nbsp;&nbsp;- d3dcompiler_47  
-&nbsp;&nbsp;&nbsp;&nbsp;- d3dx10  
-&nbsp;&nbsp;&nbsp;&nbsp;- d3d11_43  
-&nbsp;&nbsp;&nbsp;&nbsp;- d3dx9  
-&nbsp;&nbsp;&nbsp;&nbsp;- dx8vb  
-&nbsp;&nbsp;&nbsp;&nbsp;- dxvk *(ONLY if you have a DXVK-compatible graphics card driver installed. Otherwise this will not install and cancel the other DLL installs too.)*
-&nbsp;&nbsp;&nbsp;&nbsp;- quartz  
-&nbsp;&nbsp;&nbsp;&nbsp;- vcrun2019  
-3. Make sure DXVK and VKD3D are enabled, Esync *may* cause issues, disable it if unsure.
+Quick rundown for Lutris:
+1. Install the newest Wine runner that your system can run. (The Manage Versions button next to Wine under the "Runners" tab in Lutris, or use ProtonUp-Qt for a much broader variety of choice if having issues.)
+2. Disable Lutris Runtime if unsure.
+3. Wineprefix DLLs:  
+&nbsp;- cmd  
+&nbsp;- d3dcompiler_47  
+&nbsp;- d3dx10  
+&nbsp;- d3d11_43  
+&nbsp;- d3dx9  
+&nbsp;- dx8vb  
+&nbsp;- dxvk **(Only if you have a DXVK-compatible graphics card driver installed. Otherwise this will not install and fail the other DLL installs too.)**<br>
+&nbsp;- quartz  
+&nbsp;- vcrun2019  
+4. Make sure DXVK and VKD3D are enabled, Esync *may* cause issues, disable it if unsure.
   
   
 After doing this, the key things you should have at this point are:  
@@ -81,6 +82,7 @@ Some issues you may or may not encounter:
 
 2.  The FPS limiter present in the graphics settings may lead to choppiness and sharp screen tearing.  
 &nbsp;&nbsp;&nbsp;&nbsp;- Consider using VSync without the FPS limiter instead.  
+&nbsp;&nbsp;&nbsp;&nbsp;- Mangohud can also be a good choice for an FPS limiter, for example: Setting `MANGOHUD_CONFIG=no_display,fps_limit=60 mangohud` as the game executable's (not the launcher's) launch options would limit it to 60 fps.<br>
   
 3. Stuttering when you move and look around, this is because you're using ReShade but aren't running the game with Wine 8.0+ or an equivalent fork, you can fix this by:
 * Removing Reshade: ```gamma-launcher remove-reshade --anomaly <Anomaly path>```
