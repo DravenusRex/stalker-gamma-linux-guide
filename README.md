@@ -17,14 +17,14 @@ If you have any info to add to the guide; feel free to make a PR.
 
 <ins>***Avoid asking GAMMA support for help with Linux,***</ins> they do not currently support Linux, and can only do so much to help anyway.
 
-As of May 1, 2023, the GAMMA installer uses powershell;  
+As of May 1, 2023, the GAMMA installer uses powershell;
 As far as I know, <ins>there is not a way to run the installer on Linux.</ins>  
 A few people have tried it with powershell for Linux, it has not worked so far.  
 Grok has plans to rebuild the installer without powershell eventually.  
 
 However, Mord3rca built a [Linux compatible python-based launcher here.](https://github.com/Mord3rca/gamma-launcher)  
 You should go and get that installed and ready to go before you continue.  
-If you don't want to go that route, your other option is using Grok's launcher on a Windows VM/dual boot, check this [old branch.](https://github.com/DravenusRex/stalker-gamma-linux-guide/tree/vm-method)  
+If you don't want to go that route, or difficulties crop up, your other option is using Grok's launcher on a Windows VM/dual boot, check this [old branch.](https://github.com/DravenusRex/stalker-gamma-linux-guide/tree/vm-method)  
 I very highly recommend using Mord3rca's launcher, it already works wonderfully, and he's continuing to improve it.  
 Everything will be setup as close as the official installer as possible.  
 
@@ -35,7 +35,7 @@ When it tells you to run Anomaly for the set-up, use your preferred method, I re
 
 Quick rundown for Lutris:
 1. Install the newest Wine runner that your system can run. (The Manage Versions button next to Wine under the "Runners" tab in Lutris, or use ProtonUp-Qt for a much broader variety of choice if having issues.)
-2. Disable Lutris Runtime if unsure.
+2. Disable Lutris Runtime if your system ones are better for games.
 3. Wineprefix DLLs:  
 &nbsp;- cmd  
 &nbsp;- d3dcompiler_47  
@@ -75,16 +75,21 @@ All done with settings.
 At this point, you should be able to run the game through MO2, if AnomalyLauncher doesn't work try running DX# from the drop down instead. 
 Some issues you may or may not encounter:
 
-1.  The game window might not properly size to your screen (especially if you alt tab), or may appear as a small black window, if this is the case:  
-&nbsp;&nbsp;&nbsp;&nbsp;- Edit the user.ltx file found in \<Anomaly path\>/appdata/  
-&nbsp;&nbsp;&nbsp;&nbsp;- Change rs__screenmode (fullscreen|borderless|windowed), different options work for different set-ups.  
-&nbsp;&nbsp;&nbsp;&nbsp;- Double check that vid_mode is set correctly according to your display, e.g. vid_mode 1920x1080  
+**1.  The game window might not properly size to your screen (especially if you alt tab), or may appear as a small black window, if this is the case:**
+  * Edit the user.ltx file found in \<Anomaly path\>/appdata/  
+  * Change rs__screenmode (fullscreen|borderless|windowed), different options work for different set-ups.  
+  * Double check that vid_mode is set correctly according to your display, e.g. vid_mode 1920x1080  
 
-2.  The FPS limiter present in the graphics settings may lead to choppiness and sharp screen tearing.  
-&nbsp;&nbsp;&nbsp;&nbsp;- Consider using VSync without the FPS limiter instead.  
-&nbsp;&nbsp;&nbsp;&nbsp;- Mangohud can also be a good choice for an FPS limiter, for example: Setting `MANGOHUD_CONFIG=no_display,fps_limit=60 mangohud` as the game executable's (not the launcher's) launch options would limit it to 60 fps.<br>
+**2.  The FPS limiter present in the graphics settings may lead to choppiness and sharp screen tearing.**
+  * Consider using VSync without the FPS limiter instead.  
+  * Mangohud can also be a good choice for an FPS limiter, for example: Setting `MANGOHUD_CONFIG=no_display,fps_limit=60 mangohud` as the game executable's (not the launcher's) launch options in MO2 would limit it to 60 FPS.<br>
   
-3. Stuttering when you move and look around, this is because you're using ReShade but aren't running the game with Wine 8.0+ or an equivalent fork, you can fix this by:
+**3. Stuttering when you move and look around, this is because you're using ReShade but aren't running the game with Wine 8.0+ or an equivalent fork, you can fix this by:**
+
+* Upgrading your Lutris, Steam, or system Wine version and using the new version instead.
+
+	***If that doesn't work:***
+
 * Removing Reshade: ```gamma-launcher remove-reshade --anomaly <Anomaly path>```
 * Then purging the shader cache ```gamma-launcher purge-shader-cache --anomaly <Anomaly path>```
 * Then removing these mods:
