@@ -42,7 +42,7 @@ Quick rundown for Lutris:
 &nbsp;&nbsp;&nbsp;&nbsp;- d3d11_43  
 &nbsp;&nbsp;&nbsp;&nbsp;- d3dx9  
 &nbsp;&nbsp;&nbsp;&nbsp;- dx8vb  
-&nbsp;&nbsp;&nbsp;&nbsp;- dxvk     **(ONLY if you have a DXVK-compatible graphics card driver installed. Otherwise this will not install and cancel the other DLL installs too.)**
+&nbsp;&nbsp;&nbsp;&nbsp;- dxvk *(ONLY if you have a DXVK-compatible graphics card driver installed. Otherwise this will not install and cancel the other DLL installs too.)*
 &nbsp;&nbsp;&nbsp;&nbsp;- quartz  
 &nbsp;&nbsp;&nbsp;&nbsp;- vcrun2019  
 3. Make sure DXVK and VKD3D are enabled, Esync *may* cause issues, disable it if unsure.
