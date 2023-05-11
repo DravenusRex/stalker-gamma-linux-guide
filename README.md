@@ -82,7 +82,7 @@ Some issues you may or may not encounter:
 
 **2.  The FPS limiter present in the graphics settings may lead to choppiness and sharp screen tearing.**
   * Mangohud is a good choice for an FPS limiter, for example: Setting `MANGOHUD_CONFIG=no_display,fps_limit=60 mangohud` as the launch options for the game executable you'd like to use (such as DX10.exe) in MO2 would limit it to 60 FPS. It doesn't do anything if set for the Anomaly launcher rather than the game .exes themselves.<br>
-  * Consider using VSync without the FPS limiter instead.  
+  * Consider using VSync without the FPS limiter enabled instead.  
   
 **3. Stuttering when you move and look around, this is because you're using ReShade but aren't running the game with Wine 8.0+ or an equivalent fork, you can fix this by:**
 
