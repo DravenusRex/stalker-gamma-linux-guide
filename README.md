@@ -33,10 +33,10 @@ Everything will be setup as close as the official installer as possible.
 Follow the installation instructions as normal in the GAMMA discord server, all the way up until it says to use Grok's launcher.
 When it tells you to run Anomaly for the set-up, use your preferred method, I recommend Lutris with Wine 8.0+ since it now supports ReShade.  
 
-Quick rundown for Lutris:
+**Quick rundown for Lutris:**
 1. Install the newest Wine runner that your system can run. (The Manage Versions button next to Wine under the "Runners" tab in Lutris, or use ProtonUp-Qt for a much broader variety of choice if having issues.)
-2. Disable Lutris Runtime if your system ones are better for games.
-3. Wineprefix DLLs:  
+2. Disable Lutris Runtime if your system ones are better for games/if there are issues.
+3. Wineprefix DLLs to install:  
 &nbsp;- cmd  
 &nbsp;- d3dcompiler_47  
 &nbsp;- d3dx10  
@@ -67,7 +67,7 @@ After you select your Anomaly folder, another error may appear saying "The selec
 If you did it right, you should have the proper number of mods, this number can be found in the GAMMA discord.  
 If this number is 0, you didn't give it the correct path to your game, you can change it in the settings (Ctrl+S).  
 If it's another number, you are going to have to do some troubleshooting.  
-In settings(Ctrl+S), go to the Theme tab and choose 1809 Dark Mode, then go to the General tab and untick "Check for updates".   
+*Optional:* In settings(Ctrl+S), go to the Theme tab and choose 1809 Dark Mode, then go to the General tab and untick "Check for updates".   
 All done with settings.  
 
 <br>
@@ -81,8 +81,8 @@ Some issues you may or may not encounter:
   * Double check that vid_mode is set correctly according to your display, e.g. vid_mode 1920x1080  
 
 **2.  The FPS limiter present in the graphics settings may lead to choppiness and sharp screen tearing.**
+  * Mangohud is a good choice for an FPS limiter, for example: Setting `MANGOHUD_CONFIG=no_display,fps_limit=60 mangohud` as the launch options for the game executable you'd like to use (such as DX10.exe) in MO2 would limit it to 60 FPS. It doesn't do anything if set for the Anomaly launcher rather than the game .exes themselves.<br>
   * Consider using VSync without the FPS limiter instead.  
-  * Mangohud can also be a good choice for an FPS limiter, for example: Setting `MANGOHUD_CONFIG=no_display,fps_limit=60 mangohud` as the game executable's (not the launcher's) launch options in MO2 would limit it to 60 FPS.<br>
   
 **3. Stuttering when you move and look around, this is because you're using ReShade but aren't running the game with Wine 8.0+ or an equivalent fork, you can fix this by:**
 
