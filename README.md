@@ -34,7 +34,7 @@ Follow the installation instructions as normal in the GAMMA discord server, all 
 When it tells you to run Anomaly for the set-up, use your preferred method, I recommend Lutris with Wine 8.0+ since it now supports ReShade.  
 
 **Quick rundown for Lutris:**
-1. Install the newest Wine runner that your system can run. (The Manage Versions button next to Wine under the "Runners" tab in Lutris, or use ProtonUp-Qt for a much broader variety of choice if having issues.)
+1. Install the newest stable Wine runner that your system can run. <sup><sub>**(Recommend using your system package manager, the Lutris built in version manager, or ProtonUp-Qt.)**</sub></sup>
 2. Disable Lutris Runtime if your system ones are better for games/if there are issues.
 3. Wineprefix DLLs to install:  
 &nbsp;- cmd  
@@ -43,10 +43,10 @@ When it tells you to run Anomaly for the set-up, use your preferred method, I re
 &nbsp;- d3d11_43  
 &nbsp;- d3dx9  
 &nbsp;- dx8vb  
-&nbsp;- dxvk **(Only if you have a DXVK-marked graphics card driver installed (Tested on Nvidia proprietary, might be the same for AMD?). Otherwise this will not install and fail the other DLL installs too.)**<br>
+&nbsp;- dxvk <sub><sup>**(Major performance boost, but you need a DXVK-marked driver, if you are unsure, install this seperately from the other DLLs so they don't fail.)**</sup></sub><br>
 &nbsp;- quartz  
 &nbsp;- vcrun2019  
-4. Make sure DXVK and VKD3D are enabled, Esync *may* cause issues, disable it if unsure.
+4. Make sure DXVK and VKD3D are enabled, Esync *may* cause issues, disable it if unsure, Fsync may or may not work on some Wine versions.
   
   
 After doing this, the key things you should have at this point are:  
@@ -67,7 +67,8 @@ After you select your Anomaly folder, another error may appear saying "The selec
 If you did it right, you should have the proper number of mods, this number can be found in the GAMMA discord.  
 If this number is 0, you didn't give it the correct path to your game, you can change it in the settings (Ctrl+S).  
 If it's another number, you are going to have to do some troubleshooting.  
-*Optional:* In settings(Ctrl+S), go to the Theme tab and choose 1809 Dark Mode, then go to the General tab and untick "Check for updates".   
+In settings(Ctrl+S), go to the General tab and untick "Check for updates".   
+*Optional:* Go to the Theme tab and choose 1809 Dark Mode.  
 All done with settings.  
 
 <br>
@@ -86,9 +87,9 @@ Some issues you may or may not encounter:
   
 **3. Stuttering when you move and look around, this is because you're using ReShade but aren't running the game with Wine 8.0+ or an equivalent fork, you can fix this by:**
 
-* Upgrading your Lutris, Steam, or system Wine version and using the new version instead.
+* Running the game with Wine 8.0+ or an equivalent fork.
 
-	***If that doesn't work:***
+	***If that doesn't work, or if you insist on using old versions:***
 
 * Removing Reshade: ```gamma-launcher remove-reshade --anomaly <Anomaly path>```
 * Then purging the shader cache ```gamma-launcher purge-shader-cache --anomaly <Anomaly path>```
