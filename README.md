@@ -40,7 +40,7 @@ When it tells you to run Anomaly for the set-up, use your preferred method, I re
 &nbsp;- cmd  
 &nbsp;- d3dcompiler_47  
 &nbsp;- d3dx10  
-&nbsp;- d3d11_43  
+&nbsp;- d3dx11_43  
 &nbsp;- d3dx9  
 &nbsp;- dx8vb  
 &nbsp;- dxvk <sub><sup>**(Major performance boost, but you need a DXVK-marked driver, if you are unsure, install this seperately from the other DLLs so they don't fail.)**</sup></sub><br>
