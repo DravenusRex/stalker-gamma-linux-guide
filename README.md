@@ -30,7 +30,6 @@ Everything will be setup as close as the official installer as possible.
 
 <h4>Okay, you have Mord3rca's launcher set up and ready to go, now what?</h4>
 
-Follow the installation instructions as normal in the GAMMA discord server, all the way up until it says to use Grok's launcher.
 When it tells you to run Anomaly for the set-up, use your preferred method, I recommend Lutris with Wine 8.0+ since it now supports ReShade.  
 
 **Quick rundown for Lutris:**
@@ -47,22 +46,16 @@ When it tells you to run Anomaly for the set-up, use your preferred method, I re
 &nbsp;- quartz  
 &nbsp;- vcrun2019  
 4. Make sure DXVK and VKD3D are enabled, Esync *may* cause issues, disable it if unsure, Fsync may or may not work on some Wine versions.
-  
-  
-After doing this, the key things you should have at this point are:  
-- A GAMMA directory which contains the extracted contents of GAMMA RC3.7z and downloads.7z
-- An Anomaly directory containing the extracted contents of Anomaly-1.5.1.7z and Anomaly-1.5.1-to-1.5.2-Update.7z, which you ran.
 
-Once you've done this, you may wish to check the integrity of your GAMMA folder:  
-`gamma-launcher check-md5 --gamma <GAMMA path>`  
-Then you can run the installer with:  
-`gamma-launcher full-install --anomaly <anomaly path> --gamma <GAMMA path>`
+Then you can run the installer with:
+`gamma-launcher full-install --anomaly <anomaly path> --gamma <GAMMA path> [--cache-directory <Path>]`
 
 After that, add Mod Organizer (\<GAMMA path\>/ModOrganizer.exe) to Lutris, you can use the same wineprefix and settings as before.  
-Launch Mod Organizer. It might provide an error saying "Cannot open instance 'Portable'..."  
-Click OK, and then Browse and select your Anomaly folder; an easy way to find it is clicking "My Computer" and going to the "Z" drive.  
-You will notice it represents your native Linux filesystem.  
-After you select your Anomaly folder, another error may appear saying "The selected profile 'Default' does not exist...", you can ignore this.
+Launch Mod Organizer and create a new Portable instance.
+Browse and select your Anomaly folder; an easy way to find it is clicking "My Computer" and going to the "Z" drive.  
+You will notice it represents your native Linux filesystem.
+After you select your Anomaly folder, another error may appear saying "The selected profile 'Default' does not exist...", you can ignore this
+since it will automatically switch to G.A.M.M.A. profile.
 
 If you did it right, you should have the proper number of mods, this number can be found in the GAMMA discord.  
 If this number is 0, you didn't give it the correct path to your game, you can change it in the settings (Ctrl+S).  
