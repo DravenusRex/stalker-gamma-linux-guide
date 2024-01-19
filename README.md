@@ -50,6 +50,14 @@ When it tells you to run Anomaly for the set-up, use your preferred method, I re
 Then you can run the installer with:
 `gamma-launcher full-install --anomaly <anomaly path> --gamma <GAMMA path> [--cache-directory <Path>]`
 
+Optional: If you want to speedup initial setup for anomaly install & first gamma setup you can pre-download the following files
+and use `--cache-directory` option to point to the cache folder containing files:
+
+  * [Anomaly-1.5.1.2.7z](https://www.moddb.com/downloads/start/207799)
+  * [Anomaly-1.5.1-to-1.5.2-Update.7z](https://www.moddb.com/downloads/start/235237)
+  * [Mod.Organizer-2.4.4.7z](https://github.com/ModOrganizer2/modorganizer/releases/download/v2.4.4/Mod.Organizer-2.4.4.7z)
+  * [gamma_setup-main.zip](https://github.com/Grokitach/gamma_setup/archive/refs/heads/main.zip)
+
 After that, add Mod Organizer (\<GAMMA path\>/ModOrganizer.exe) to Lutris, you can use the same wineprefix and settings as before.  
 Launch Mod Organizer and create a new Portable instance.
 Browse and select your Anomaly folder; an easy way to find it is clicking "My Computer" and going to the "Z" drive.  
